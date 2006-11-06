@@ -1,3 +1,5 @@
+require 'set_or_append'
+
 module PluginAWeek #:nodoc:
   module Helpers #:nodoc:
     module StyledInputHelper
@@ -34,4 +36,8 @@ module ActionView #:nodoc:
       alias_method_chain :tag, :styled_input
     end
   end
+end
+
+ActionController::Base.class_eval do
+  helper PluginAWeek::Helpers::StyledInputHelper
 end
