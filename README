@@ -4,6 +4,10 @@ styled_inputs adds automated styling of input fields with css classes.
 
 == Resources
 
+API
+
+* http://api.pluginaweek.org/styled_inputs
+
 Wiki
 
 * http://wiki.pluginaweek.org/Styled_inputs
@@ -22,3 +26,23 @@ Development
 
 == Description
 
+Normally, it is difficult to style inputs without adding classes to them so
+that you can specify css for each type of input.  Since this can become a
+tedious manual task, styled_inputs automatically adds a classes to each
+input that is generated either by tag or form helpers.  The class that is
+specified is the type of input being generated.
+
+=== Tags
+
+  text_field_tag('name')    # => <input class="text" id="name" name="name" type="text" />
+  hidden_field_tag('name')  # => <input class="hidden" id="name" name="name" type="hidden" />
+
+=== Form helpers
+
+  text_field(:person, :name)    # => <input class="text" id="person_name" name="person[name]" size="30" type="text" />
+  hidden_field(:person, :name)  # => <input class="hidden" id="person_name" name="person[name]" type="hidden" />
+
+== Dependencies
+
+This plugin depends on the presence of the following plugins:
+* set_or_append - http://wiki.pluginaweek.org/Set_or_append
