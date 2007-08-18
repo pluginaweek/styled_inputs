@@ -29,7 +29,7 @@ module PluginAWeek #:nodoc:
         options = options.stringify_keys
         
         if name.to_s == 'input' && options.include?('type')
-          options.set_or_prepend('class', options['type'])
+          options.set_or_append('class', options['type'])
         end
         
         options

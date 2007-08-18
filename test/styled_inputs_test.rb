@@ -42,8 +42,8 @@ class StyledInputsTest < Test::Unit::TestCase
     assert_equal expected, styled_input('input', expected)
   end
   
-  def test_should_prepend_style_if_class_is_already_populated
-    expected = {'type' => 'text', 'class' => 'text selected'}
+  def test_should_append_style_if_class_is_already_populated
+    expected = {'type' => 'text', 'class' => 'selected text'}
     assert_equal expected, styled_input('input', {'type' => 'text', 'class' => 'selected'})
   end
   
