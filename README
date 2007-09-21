@@ -1,6 +1,6 @@
 = styled_inputs
 
-styled_inputs adds automated styling of input fields with css classes.
++styled_inputs+ adds automated styling of input fields with css classes.
 
 == Resources
 
@@ -14,7 +14,7 @@ Wiki
 
 Announcement
 
-* http://www.pluginaweek.org/
+* http://www.pluginaweek.org
 
 Source
 
@@ -32,6 +32,8 @@ tedious manual task, styled_inputs automatically adds a classes to each
 input that is generated either by tag or form helpers.  The class that is
 specified is the type of input being generated.
 
+== Usage
+
 === Tags
 
   text_field_tag('name')    # => <input class="text" id="name" name="name" type="text" />
@@ -45,4 +47,4 @@ specified is the type of input being generated.
 == Dependencies
 
 This plugin depends on the presence of the following plugins:
-* set_or_append - http://wiki.pluginaweek.org/Set_or_append
+* set_or_append[http://wiki.pluginaweek.org/Set_or_append]
