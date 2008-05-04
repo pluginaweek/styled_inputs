@@ -1,4 +1,4 @@
-$:.unshift("#{File.dirname(__FILE__)}/../../../ruby/hash/set_or_append/lib")
+$:.unshift("#{File.dirname(__FILE__)}/../../set_or_append/lib")
 
 require 'test/unit'
 require 'rubygems'
