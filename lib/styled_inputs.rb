@@ -1,4 +1,3 @@
-require 'set_or_append'
 require 'styled_inputs/extensions/tag_helper'
 require 'styled_inputs/extensions/instance_tag'
 
@@ -30,7 +29,7 @@ module PluginAWeek #:nodoc:
       options = options.stringify_keys
       
       if name.to_s == 'input' && options.include?('type')
-        options.set_or_append('class', options['type'])
+        options['class'] = (options['class'].to_s + " #{options['type']}").strip
       end
       
       options
