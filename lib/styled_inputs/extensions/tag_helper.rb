@@ -8,8 +8,8 @@ module PluginAWeek #:nodoc:
           end
         end
         
-        def tag_with_styled_inputs(name, options = nil, open = false) #:nodoc:
-          tag_without_styled_inputs(name, styled_input(name, options), open)
+        def tag_with_styled_inputs(name, options = nil, *args) #:nodoc:
+          tag_without_styled_inputs(name, styled_input(name, options), *args)
         end
       end
     end

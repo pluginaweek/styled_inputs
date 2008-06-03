@@ -127,3 +127,24 @@ class FormHelperTest < Test::Unit::TestCase
     assert_equal '<input class="radio" id="person_agree_1" name="person[agree]" type="radio" value="1" />', radio_button(:person, :agree, 1)
   end
 end
+
+class TagHelperTest < Test::Unit::TestCase
+  include PluginAWeek::StyledInputs
+  include ActionView::Helpers::TagHelper
+  
+  def test_should_allow_no_options_to_be_specified
+    assert_equal '<br />', tag('br')
+  end
+  
+  def test_should_allow_options_to_be_specified
+    assert_equal '<input class="text" disabled="disabled" type="text" />', tag('input', {:type => 'text', :disabled => true})
+  end
+  
+  def test_should_allow_open_to_be_specified
+    assert_equal '<br>', tag('br', nil, true)
+  end
+  
+  def test_should_allow_escape_to_be_specified
+    assert_equal '<img src="open &amp; shut.png" />', tag('img', {:src => 'open &amp; shut.png'}, false, false)
+  end
+end

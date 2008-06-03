@@ -25,8 +25,8 @@ module PluginAWeek #:nodoc:
   module StyledInputs
     # Appends the input type to the value currently stored in the html options
     # for the tag.
-    def styled_input(name, options)
-      options = options.stringify_keys
+    def styled_input(name, options = nil)
+      options = (options || {}).stringify_keys
       
       if name.to_s == 'input' && options.include?('type')
         options['class'] = (options['class'].to_s + " #{options['type']}").strip

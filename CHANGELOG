@@ -1,5 +1,9 @@
 *SVN*
 
+*0.0.4* (June 3rd, 2008)
+
+* Add support for Rails 2.0+
+
 *0.0.3* (June 1st, 2008)
 
 * Remove dependency on set_or_append
