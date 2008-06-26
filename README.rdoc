@@ -4,21 +4,21 @@
 
 == Resources
 
-Wiki
-
-* http://wiki.pluginaweek.org/Styled_inputs
-
 API
 
 * http://api.pluginaweek.org/styled_inputs
 
+Bugs
+
+* http://pluginaweek.lighthouseapp.com/projects/13289-styled_inputs
+
 Development
 
-* http://dev.pluginaweek.org/browser/trunk/styled_inputs
+* http://github.com/pluginaweek/styled_inputs
 
 Source
 
-* http://svn.pluginaweek.org/trunk/styled_inputs
+* git://github.com/pluginaweek/styled_inputs.git
 
 == Description
 
@@ -39,6 +39,15 @@ specified is the type of input being generated.
 
   text_field(:person, :name)    # => <input class="text" id="person_name" name="person[name]" size="30" type="text" />
   hidden_field(:person, :name)  # => <input class="hidden" id="person_name" name="person[name]" type="hidden" />
+
+== Testing
+
+Before you can run any tests, the following gem must be installed:
+* plugin_test_helper[http://github.com/pluginaweek/plugin_test_helper]
+
+To run against a specific version of Rails:
+
+  rake test RAILS_FRAMEWORK_ROOT=/path/to/rails
 
 == Dependencies
 
