@@ -1,6 +1,7 @@
 module PluginAWeek #:nodoc:
   module StyledInputs
     module Extensions #:nodoc:
+      # Adds support for hooking calls to +tag+ for form fields
       module InstanceTag
         def self.included(base) #:nodoc:
           base.class_eval do
@@ -8,6 +9,8 @@ module PluginAWeek #:nodoc:
           end
         end
         
+        # Ensure that the options are updated for input tags before generating
+        # the html for the tag
         def tag_with_styled_inputs(name, options, *args) #:nodoc:
           tag_without_styled_inputs(name, styled_input(name, options), *args)
         end
