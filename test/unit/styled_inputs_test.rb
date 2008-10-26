@@ -1,8 +1,7 @@
-require File.dirname(__FILE__) + '/test_helper'
+require File.dirname(__FILE__) + '/../test_helper'
 
-class StyledInputsTest < Test::Unit::TestCase
-  include PluginAWeek::StyledInputs
-  include ActionView::Helpers::TagHelper
+class StyledInputsTest < ActionView::TestCase
+  tests PluginAWeek::StyledInputs
   
   def test_should_not_style_input_if_tag_is_not_input
     expected = {}
@@ -39,11 +38,8 @@ class StyledInputsTest < Test::Unit::TestCase
   end
 end
 
-class FormTagHelperTest < Test::Unit::TestCase
-  include PluginAWeek::StyledInputs
-  include ActionView::Helpers::TagHelper
-  include ActionView::Helpers::FormTagHelper
-  include ActionView::Helpers::FormHelper
+class FormTagHelperTest < ActionView::TestCase
+  tests PluginAWeek::StyledInputs
   
   def test_should_style_text_field_tag
     assert_equal '<input class="text" id="name" name="name" type="text" />', text_field_tag('name')
@@ -83,7 +79,7 @@ class FormTagHelperTest < Test::Unit::TestCase
     end
 end
 
-class FormHelperTest < Test::Unit::TestCase
+class FormHelperTest < ActionView::TestCase
   class Person
     attr_accessor :name,
                   :agree,
@@ -91,10 +87,7 @@ class FormHelperTest < Test::Unit::TestCase
                   :secret
   end
   
-  include PluginAWeek::StyledInputs
-  include ActionView::Helpers::TagHelper
-  include ActionView::Helpers::FormTagHelper
-  include ActionView::Helpers::FormHelper
+  tests PluginAWeek::StyledInputs
   
   def setup
     @person = Person.new
@@ -128,9 +121,8 @@ class FormHelperTest < Test::Unit::TestCase
   end
 end
 
-class TagHelperTest < Test::Unit::TestCase
-  include PluginAWeek::StyledInputs
-  include ActionView::Helpers::TagHelper
+class TagHelperTest < ActionView::TestCase
+  tests PluginAWeek::StyledInputs
   
   def test_should_allow_no_options_to_be_specified
     assert_equal '<br />', tag('br')
