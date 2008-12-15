@@ -8,7 +8,7 @@ class FormHelperTest < ActionView::TestCase
                   :secret
   end
   
-  tests PluginAWeek::StyledInputs
+  tests StyledInputs
   
   def setup
     @person = Person.new
