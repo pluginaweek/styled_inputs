@@ -1,8 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class StyledInputsTest < ActionView::TestCase
-  tests StyledInputs
-  
   def test_should_not_style_input_if_tag_is_not_input
     expected = {}
     assert_equal expected, styled_input('td', expected)

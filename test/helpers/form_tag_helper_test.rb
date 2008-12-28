@@ -1,8 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class FormTagHelperTest < ActionView::TestCase
-  tests StyledInputs
-  
   def test_should_style_text_field_tag
     assert_equal '<input class="text" id="name" name="name" type="text" />', text_field_tag('name')
   end

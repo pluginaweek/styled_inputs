@@ -1,8 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class TagHelperTest < ActionView::TestCase
-  tests StyledInputs
-  
   def test_should_allow_no_options_to_be_specified
     assert_equal '<br />', tag('br')
   end

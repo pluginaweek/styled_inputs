@@ -24,23 +24,4 @@ require 'styled_inputs/extensions/instance_tag'
 #   text_field_tag('name', :class => 'selected')        # => <input class="text selected" id="name" name="name" type="text" />
 #   text_field_tag('name', :class => 'selected shadow') # => <input class="text selected shadow" id="name" name="name" type="text" />
 module StyledInputs
-  # Appends the input type to the value currently stored in the html options
-  # for the tag.
-  def styled_input(name, options = nil)
-    options = (options || {}).stringify_keys
-    
-    if name.to_s == 'input' && options.include?('type')
-      options['class'] = (options['class'].to_s + " #{options['type']}").strip
-    end
-    
-    options
-  end
-end
-
-ActionController::Base.class_eval do
-  helper StyledInputs
-end
-
-ActionView::Helpers::InstanceTag.class_eval do
-  include StyledInputs
 end

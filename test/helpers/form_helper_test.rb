@@ -8,8 +8,6 @@ class FormHelperTest < ActionView::TestCase
                   :secret
   end
   
-  tests StyledInputs
-  
   def setup
     @person = Person.new
   end
