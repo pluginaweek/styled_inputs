@@ -20,8 +20,8 @@ class FormHelperTest < ActionView::TestCase
     assert_equal '<input class="password" id="person_secret" name="person[secret]" size="30" type="password" />', password_field(:person, :secret)
   end
   
-  def test_should_style_hidden_field
-    assert_equal '<input class="hidden" id="person_name" name="person[name]" type="hidden" />', hidden_field(:person, :name)
+  def test_should_not_style_hidden_field
+    assert_equal '<input id="person_name" name="person[name]" type="hidden" />', hidden_field(:person, :name)
   end
   
   def test_should_style_file_field
@@ -31,7 +31,7 @@ class FormHelperTest < ActionView::TestCase
   def test_should_style_check_box
     expected =
       '<input class="checkbox" id="person_agree" name="person[agree]" type="checkbox" value="1" />' +
-      '<input class="hidden" name="person[agree]" type="hidden" value="0" />'
+      '<input name="person[agree]" type="hidden" value="0" />'
     assert_equal expected, check_box(:person, :agree)
   end
   

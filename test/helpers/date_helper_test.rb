@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class DateHelperTest < ActionView::TestCase
-  def test_should_style_hidden_date_fields_if_using_hidden
-    assert_equal '<input class="hidden" id="date_year" name="date[year]" type="hidden" value="1980" />', select_year(1980, :use_hidden => true).strip
+  def test_should_not_style_hidden_date_fields_if_using_hidden
+    assert_equal '<input id="date_year" name="date[year]" type="hidden" value="1980" />', select_year(1980, :use_hidden => true).strip
   end
   
   def test_should_not_style_hidden_date_fields_if_not_using_hidden

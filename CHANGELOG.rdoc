@@ -1,5 +1,6 @@
 == master
 
+* Don't style hidden inputs
 * Fix input styling not always being included on classes directly including ActionView::Helpers::TagHelper
 
 == 0.1.0 / 2008-12-14

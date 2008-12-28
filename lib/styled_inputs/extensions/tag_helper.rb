@@ -6,7 +6,7 @@ ActionView::Helpers::TagHelper.class_eval do
   # for the tag.
   def styled_input(name, options = nil)
     options = (options || {}).stringify_keys
-    options['class'] = "#{options['class']} #{options['type']}".strip if name.to_s == 'input' && options.include?('type')
+    options['class'] = "#{options['class']} #{options['type']}".strip if name.to_s == 'input' && options.include?('type') && options['type'] != 'hidden'
     options
   end
   

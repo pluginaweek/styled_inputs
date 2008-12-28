@@ -5,8 +5,8 @@ class FormTagHelperTest < ActionView::TestCase
     assert_equal '<input class="text" id="name" name="name" type="text" />', text_field_tag('name')
   end
   
-  def test_should_style_hidden_field_tag
-    assert_equal '<input class="hidden" id="name" name="name" type="hidden" />', hidden_field_tag('name')
+  def test_should_not_style_hidden_field_tag
+    assert_equal '<input id="name" name="name" type="hidden" />', hidden_field_tag('name')
   end
   
   def test_should_style_file_field_tag
