@@ -30,8 +30,8 @@ class FormHelperTest < ActionView::TestCase
   
   def test_should_style_check_box
     expected =
-      '<input class="checkbox" id="person_agree" name="person[agree]" type="checkbox" value="1" />' +
-      '<input name="person[agree]" type="hidden" value="0" />'
+      '<input name="person[agree]" type="hidden" value="0" />' +
+      '<input class="checkbox" id="person_agree" name="person[agree]" type="checkbox" value="1" />'
     assert_equal expected, check_box(:person, :agree)
   end
   
