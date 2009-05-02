@@ -7,7 +7,8 @@ spec = Gem::Specification.new do |s|
   s.name              = 'styled_inputs'
   s.version           = '0.1.1'
   s.platform          = Gem::Platform::RUBY
-  s.summary           = 'Adds automated styling of input fields with css classes'
+  s.summary           = 'Adds automated styling of input fields with css classes in Rails'
+  s.description       = s.summary
   
   s.files             = FileList['{lib,test}/**/*'] + %w(CHANGELOG.rdoc init.rb LICENSE Rakefile README.rdoc) - FileList['test/app_root/{log,log/*,script,script/*}']
   s.require_path      = 'lib'
