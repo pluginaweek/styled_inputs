@@ -1,5 +1,7 @@
 == master
 
+* Release gems via rake-gemcutter instead of rubyforge
+
 == 0.1.1 / 2008-12-28
 
 * Don't style hidden inputs
