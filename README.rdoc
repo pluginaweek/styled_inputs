@@ -6,7 +6,7 @@
 
 API
 
-* http://rdoc.info/projects/pluginaweek/styled_inputs
+* http://rdoc.info/github/pluginaweek/styled_inputs/master/frames
 
 Bugs
 
