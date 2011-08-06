@@ -1,4 +1,4 @@
-= styled_inputs
+= styled_inputs http://travis-ci.org/pluginaweek/styled_inputs.png
 
 +styled_inputs+ adds automated styling of input fields with css classes.
 
@@ -15,6 +15,10 @@ Bugs
 Development
 
 * http://github.com/pluginaweek/styled_inputs
+
+Testing
+
+* http://travis-ci.org/pluginaweek/styled_inputs
 
 Source
 
