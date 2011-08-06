@@ -10,7 +10,7 @@ API
 
 Bugs
 
-* http://pluginaweek.lighthouseapp.com/projects/13289-styled_inputs
+* http://github.com/pluginaweek/styled_inputs/issues
 
 Development
 
